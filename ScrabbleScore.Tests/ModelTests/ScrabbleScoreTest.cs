@@ -14,8 +14,10 @@ namespace ScrabbleScore.Tests
     public void ScrabbleWord_CheckQ_Z()
     {
       string _word = "Quincy";
+      string new_word = _word.ToUpper();
       int score = 0;
-      foreach(char letter in _word){
+      foreach(char letter in new_word)
+      {
         if(letter == 'Q' || letter =='Z')
         {
            score+= 10;
@@ -23,14 +25,31 @@ namespace ScrabbleScore.Tests
         }
         else
         {
-    
+
         }
         Console.WriteLine("The letter is:"+ letter);
       }
         Console.WriteLine("Score:" + score);
     }
+    [TestMethod]
+    public void ScrabbleWord_CheckForJandX()
+    {
+      string _word = "jack";
+      string new_word = _word.ToUpper();
+      int score = 0;
+      foreach(char letter in new_word)
+      {
+        if(letter == 'J' || letter =='X')
+        {
+          score +=8;
+        }
+        else
+        {
 
-    // [TestMethod]
-    // public void ScrabbleWord_CheckMultipleWithinString
+        }
+        Console.WriteLine("The letter is:"+ letter);
+      }
+        Console.WriteLine("Score:" + score);
+    }
   }
 }

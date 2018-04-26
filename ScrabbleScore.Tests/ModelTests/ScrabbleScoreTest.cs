@@ -11,37 +11,26 @@ namespace ScrabbleScore.Tests
   public class ScrabbleScoreTests
   {
     [TestMethod]
-    public void ScrabbleWordQ()
+    public void ScrabbleWord_CheckQ_Z()
     {
-      string _word = "QZuincy";
-      //ScrabbleCheck score = new ScrabbleCheck();
+      string _word = "Quincy";
       int score = 0;
       foreach(char letter in _word){
-        //letter.ToArray();
-        //foreach(char letter in word){
-          //Console.WriteLine("The letters are:" + letter);
-        if(letter.Contains("Q"))
+        if(letter == 'Q' || letter =='Z')
         {
-           score++;
+           score+= 10;
 
         }
         else
         {
-          score += 0;
+    
         }
-        // else if(_word.Contains("Z"))
-        // {
-        //   score += 10;
-        // //  Console.WriteLine("Second Score:" + score);
-        // }
-        // else
-        // {
-        //   score +=1;
-        // }
-
-        Console.WriteLine("The word is:"+ letter);
+        Console.WriteLine("The letter is:"+ letter);
       }
         Console.WriteLine("Score:" + score);
     }
+
+    // [TestMethod]
+    // public void ScrabbleWord_CheckMultipleWithinString
   }
 }
